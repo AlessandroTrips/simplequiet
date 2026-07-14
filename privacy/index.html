@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — SimpleQuiet Studio &amp; Blinkers</title>
+<meta name="description" content="The SimpleQuiet Studio privacy policy. What Blinkers can and cannot access, in plain language: no browsing history, no tracking, no accounts.">
+<link rel="icon" href="../assets/favicon.png">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<div class="wrap">
+  <nav class="nav">
+    <a class="brand" href="../"><span class="b1">simple</span><span class="b2">quiet</span><span class="b3">studio</span></a>
+    <span class="spacer"></span>
+    <a class="link" href="../#tools">Tools</a>
+    <a class="link" href="../privacy/">Privacy</a>
+    <button class="theme-toggle" aria-label="Toggle light and dark theme" title="Toggle theme">☾</button>
+  </nav>
+
+  <article class="prose" style="padding:40px 0 10px">
+    <p class="eyebrow">Privacy Policy</p>
+    <h1 style="font-size:clamp(30px,5vw,44px)">The short, honest version.</h1>
+    <p class="updated">Last updated: 14 July 2026 · Applies to SimpleQuiet Studio and the Blinkers extension.</p>
+
+    <p><strong>We do not collect, store, sell, or transmit your personal data or your browsing activity. Full stop.</strong> Blinkers is built so that it <em>cannot</em> see the sites you visit, not merely so that it promises not to. This page explains exactly how.</p>
+
+    <h2>What we collect</h2>
+    <p><strong>Nothing.</strong> We run no analytics that can see what you browse, embed no third-party tracking scripts, and operate no server that receives your data. We have no user accounts, so there is nothing for us to hold about you.</p>
+
+    <h2>Where your data lives</h2>
+    <p>Everything Blinkers needs — your blocklist, timer settings, hard-mode preference, and focus streaks — is stored <strong>locally in your own browser</strong> (Chrome's <span class="mono">storage</span> area). It stays on your device. If you enable Chrome's built-in settings sync, your preferences may sync across your own signed-in browsers through Google, never through us.</p>
+
+    <h2>Permissions, and exactly why each one exists</h2>
+    <ul>
+      <li><strong>declarativeNetRequest</strong> — lets Blinkers block the sites on <em>your</em> blocklist using Chrome's own rules engine, on your device. This mechanism deliberately does <strong>not</strong> reveal to us — or to the extension — which sites you visit.</li>
+      <li><strong>storage</strong> — saves your settings and stats locally, as described above.</li>
+      <li><strong>browsingData</strong> — used for one narrow purpose: clearing the cached service-worker data of sites <em>on your blocklist</em>, so a cached copy can't slip past a block. It is scoped to those blocked sites only and never touches your cookies, history, passwords, or any other site's data.</li>
+      <li><strong>alarms</strong> — used by scheduled blocking (a Pro feature) to turn blocking on and off at the times you set.</li>
+    </ul>
+    <p>Blinkers requests <strong>no host permissions</strong> and <strong>no access to your history, tabs, or the content of pages you visit.</strong> It cannot read them.</p>
+
+    <h2>Network activity</h2>
+    <p>The free version of Blinkers makes <strong>zero network requests.</strong> It does not call any server, ours or anyone else's.</p>
+    <p>The only time Blinkers ever contacts the network is if you buy the optional <strong>Pro upgrade</strong>: once, to verify your licence key. That single check is handled by our merchant of record, <strong>Lemon Squeezy</strong>, who processes the purchase and validates the key. It confirms only that a licence is valid — it carries none of your browsing data. Lemon Squeezy's handling of your payment is covered by their own privacy policy.</p>
+
+    <h2>Payments</h2>
+    <p>If you purchase Pro, the transaction is handled entirely by <strong>Lemon Squeezy</strong> as the seller (merchant of record). They collect and process your payment details; we never see or store your card information. We receive only what's needed to issue and honour your licence.</p>
+
+    <h2>Children</h2>
+    <p>Our tools are general-purpose and not directed at children under 13. We collect no data from anyone, children included.</p>
+
+    <h2>Changes</h2>
+    <p>If this policy ever changes, we'll update the date above. Our direction is fixed: collect nothing, track nothing, respect you.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about privacy? Email <a href="mailto:hello.simplequiet@gmail.com" style="color:var(--ember)">hello.simplequiet@gmail.com</a>.</p>
+  </article>
+</div>
+
+<footer class="foot">
+  <div class="wrap row">
+    <span>© 2026 SimpleQuiet Studio</span>
+    <a href="../privacy/">Privacy</a>
+    <a href="mailto:hello.simplequiet@gmail.com">Contact</a>
+    <span class="spacer"></span>
+    <a href="../">← simplequiet studio</a>
+  </div>
+</footer>
+<script src="../script.js"></script>
+</body>
+</html>
