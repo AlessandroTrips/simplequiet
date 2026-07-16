@@ -23,17 +23,37 @@
   <article class="prose" style="padding:40px 0 10px">
     <p class="eyebrow">Privacy Policy</p>
     <h1 style="font-size:clamp(30px,5vw,44px)">The short, honest version.</h1>
-    <p class="updated">Last updated: 14 July 2026 · Applies to SimpleQuiet Studio and the Blinkers extension.</p>
+    <p class="updated">Last updated: 14 July 2026 · Applies to SimpleQuiet Studio and every tool we make; per-tool specifics below.</p>
 
-    <p><strong>We do not collect, store, sell, or transmit your personal data or your browsing activity. Full stop.</strong> Blinkers is built so that it <em>cannot</em> see the sites you visit, not merely so that it promises not to. This page explains exactly how.</p>
+    <p><strong>We do not collect, store, sell, or transmit your personal data or your browsing activity. Full stop.</strong> That is the standard for every SimpleQuiet tool. This policy has two parts: the commitments that apply to <em>all</em> of our software, then the specifics for each individual tool (today, that's just Blinkers).</p>
 
-    <h2>What we collect</h2>
+    <h2>Part 1 · Applies to all SimpleQuiet tools</h2>
+
+    <h3>What we collect</h3>
     <p><strong>Nothing.</strong> We run no analytics that can see what you browse, embed no third-party tracking scripts, and operate no server that receives your data. We have no user accounts, so there is nothing for us to hold about you.</p>
 
-    <h2>Where your data lives</h2>
-    <p>Everything Blinkers needs — your blocklist, timer settings, hard-mode preference, and focus streaks — is stored <strong>locally in your own browser</strong> (Chrome's <span class="mono">storage</span> area). It stays on your device. If you enable Chrome's built-in settings sync, your preferences may sync across your own signed-in browsers through Google, never through us.</p>
+    <h3>Where your data lives</h3>
+    <p>Everything our tools need is stored <strong>locally in your own browser</strong>, on your device. If you enable Chrome's built-in settings sync, your preferences may sync across your own signed-in browsers through Google — never through us.</p>
 
-    <h2>Permissions, and exactly why each one exists</h2>
+    <h3>Payments</h3>
+    <p>If you buy a paid upgrade, the transaction is handled entirely by <strong>Lemon Squeezy</strong> as the seller (merchant of record). They collect and process your payment details; we never see or store your card information. We receive only what's needed to issue and honour your licence. Lemon Squeezy's handling of your payment is covered by their own privacy policy.</p>
+
+    <h3>Children</h3>
+    <p>Our tools are general-purpose and not directed at children under 13. We collect no data from anyone, children included.</p>
+
+    <h3>Changes</h3>
+    <p>If this policy ever changes, we'll update the date above. Our direction is fixed: collect nothing, track nothing, respect you.</p>
+
+    <h3>Contact</h3>
+    <p>Questions about privacy? Email <a href="mailto:hello.simplequiet@proton.me" style="color:var(--ember)">hello.simplequiet@proton.me</a>.</p>
+
+    <h2>Part 2 · Blinkers, specifically</h2>
+    <p>Blinkers is built so that it <em>cannot</em> see the sites you visit — not merely so that it promises not to. Here is exactly what it can and cannot access.</p>
+
+    <h3>Where Blinkers stores your data</h3>
+    <p>Your blocklist, timer settings, hard-mode preference, and focus streaks are stored locally in Chrome's <span class="mono">storage</span> area, on your device — as described in Part 1.</p>
+
+    <h3>Permissions, and exactly why each one exists</h3>
     <ul>
       <li><strong>declarativeNetRequest</strong> — lets Blinkers block the sites on <em>your</em> blocklist using Chrome's own rules engine, on your device. This mechanism deliberately does <strong>not</strong> reveal to us — or to the extension — which sites you visit.</li>
       <li><strong>storage</strong> — saves your settings and stats locally, as described above.</li>
@@ -42,21 +62,9 @@
     </ul>
     <p>Blinkers requests <strong>no host permissions</strong> and <strong>no access to your history, tabs, or the content of pages you visit.</strong> It cannot read them.</p>
 
-    <h2>Network activity</h2>
+    <h3>Network activity</h3>
     <p>The free version of Blinkers makes <strong>zero network requests.</strong> It does not call any server, ours or anyone else's.</p>
-    <p>The only time Blinkers ever contacts the network is if you buy the optional <strong>Pro upgrade</strong>: once, to verify your licence key. That single check is handled by our merchant of record, <strong>Lemon Squeezy</strong>, who processes the purchase and validates the key. It confirms only that a licence is valid — it carries none of your browsing data. Lemon Squeezy's handling of your payment is covered by their own privacy policy.</p>
-
-    <h2>Payments</h2>
-    <p>If you purchase Pro, the transaction is handled entirely by <strong>Lemon Squeezy</strong> as the seller (merchant of record). They collect and process your payment details; we never see or store your card information. We receive only what's needed to issue and honour your licence.</p>
-
-    <h2>Children</h2>
-    <p>Our tools are general-purpose and not directed at children under 13. We collect no data from anyone, children included.</p>
-
-    <h2>Changes</h2>
-    <p>If this policy ever changes, we'll update the date above. Our direction is fixed: collect nothing, track nothing, respect you.</p>
-
-    <h2>Contact</h2>
-    <p>Questions about privacy? Email <a href="mailto:hello.simplequiet@proton.me" style="color:var(--ember)">hello.simplequiet@proton.me</a>.</p>
+    <p>The only time Blinkers ever contacts the network is if you buy the optional <strong>Pro upgrade</strong>: once, to verify your licence key. That single check is handled by <strong>Lemon Squeezy</strong>, who validates the key. It confirms only that a licence is valid — it carries none of your browsing data.</p>
   </article>
 </div>
 

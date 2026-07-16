@@ -150,6 +150,7 @@ p { margin:0 0 16px; }
 .prose p { color:var(--muted); }
 .prose strong { color:var(--ink); }
 .prose .updated { font-family:var(--mono); font-size:13px; color:var(--faint); }
+.prose h3 { margin-top:28px; font-size:17px; }
 
 /* footer */
 .foot { border-top:1px solid var(--line); margin-top:40px; padding:34px 0 60px; color:var(--muted); font-size:14px; }
