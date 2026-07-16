@@ -6,6 +6,7 @@
 <title>SimpleQuiet Studio — small, quiet software</title>
 <meta name="description" content="SimpleQuiet Studio makes small, privacy-first browser tools that do one thing well — and never watch you do it. Maker of Blinkers, the focus blocker that never reads your browsing history.">
 <link rel="preload" href="assets/blinkers-icon.png" as="image">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="icon" href="assets/favicon.png">
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="SimpleQuiet Studio">
@@ -13,9 +14,10 @@
 <meta property="og:type" content="website">
 </head>
 <body>
+<svg width="0" height="0" aria-hidden="true" style="position:absolute"><symbol id="sqmoon" viewBox="0 0 100 100"><mask id="sqm"><rect width="100" height="100" fill="#000"/><circle cx="50" cy="50" r="34" fill="#fff"/><circle cx="64" cy="43" r="29" fill="#000"/></mask><rect width="100" height="100" fill="currentColor" mask="url(#sqm)"/></symbol></svg>
 <div class="wrap">
   <nav class="nav">
-    <a class="brand" href="./"><span class="b1">simple</span><span class="b2">quiet</span><span class="b3">studio</span></a>
+    <a class="brand" href="./" aria-label="SimpleQuiet Studio"><span class="wm"><span class="w-simple">simple</span><svg class="w-moon" aria-hidden="true"><use href="#sqmoon"/></svg><span class="w-quiet">quiet</span></span><span class="w-studio">studio</span></a>
     <span class="spacer"></span>
     <a class="link" href="#tools">Tools</a>
     <a class="link" href="privacy/">Privacy</a>

@@ -1,8 +1,12 @@
-/* SimpleQuiet Studio — shared styles. Work-lamp palette, mirrors Blinkers. */
+/* SimpleQuiet Studio — shared styles.
+   Studio = quiet warm ink on cream (the canonical brand). Products bring their
+   OWN accent via [data-product] on <html> — e.g. Blinkers restores the ember
+   "work-lamp" accent + keeps its mole. Endorsed/hybrid: one system, per-product skin. */
 :root {
-  --bg:#FAF8F4; --raised:#FFFFFF; --sunk:#F3F0E9;
-  --ink:#1B1E26; --muted:#5B6472; --faint:#8A8477;
-  --line:#E7E2D8; --ember:#C9761A; --ember-soft:#f4e6d2; --sage:#47825A;
+  --bg:#F6F1E8; --raised:#FCF9F1; --sunk:#EEE7D9;
+  --ink:#2A2622; --muted:#6E6456; --faint:#9A9081;
+  --line:#E6DDCD; --ember:#8A7659; --ember-soft:#EFE7D8; --sage:#4F7E53;
+  --wsimple:#ADA28F;
   --shadow: 0 24px 50px -30px rgba(40,34,20,.35);
   --mono: ui-monospace,"SF Mono","JetBrains Mono","Cascadia Code",Menlo,monospace;
   --sans: system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
@@ -10,24 +14,33 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg:#14161D; --raised:#1E212B; --sunk:#0F1117;
-    --ink:#EDE8DD; --muted:#9AA1B0; --faint:#6E7688;
-    --line:#2A2E3A; --ember:#F2A24B; --ember-soft:#2a2415; --sage:#7FB08A;
+    --bg:#1A1712; --raised:#241F19; --sunk:#120F0A;
+    --ink:#F1EADF; --muted:#A79C89; --faint:#79705E;
+    --line:#332C22; --ember:#C3A987; --ember-soft:#2A2216; --sage:#7FB08A;
+    --wsimple:#8F8672;
     --shadow: 0 28px 60px -30px #000;
   }
 }
 :root[data-theme="light"] {
-  --bg:#FAF8F4; --raised:#FFFFFF; --sunk:#F3F0E9;
-  --ink:#1B1E26; --muted:#5B6472; --faint:#8A8477;
-  --line:#E7E2D8; --ember:#C9761A; --ember-soft:#f4e6d2; --sage:#47825A;
+  --bg:#F6F1E8; --raised:#FCF9F1; --sunk:#EEE7D9;
+  --ink:#2A2622; --muted:#6E6456; --faint:#9A9081;
+  --line:#E6DDCD; --ember:#8A7659; --ember-soft:#EFE7D8; --sage:#4F7E53;
+  --wsimple:#ADA28F;
   --shadow: 0 24px 50px -30px rgba(40,34,20,.35);
 }
 :root[data-theme="dark"] {
-  --bg:#14161D; --raised:#1E212B; --sunk:#0F1117;
-  --ink:#EDE8DD; --muted:#9AA1B0; --faint:#6E7688;
-  --line:#2A2E3A; --ember:#F2A24B; --ember-soft:#2a2415; --sage:#7FB08A;
+  --bg:#1A1712; --raised:#241F19; --sunk:#120F0A;
+  --ink:#F1EADF; --muted:#A79C89; --faint:#79705E;
+  --line:#332C22; --ember:#C3A987; --ember-soft:#2A2216; --sage:#7FB08A;
+  --wsimple:#8F8672;
   --shadow: 0 28px 60px -30px #000;
 }
+
+/* --- per-product accent (endorsed/hybrid) --- */
+:root[data-product="blinkers"]{ --ember:#C9761A; --ember-soft:#F4E6D2; }
+@media (prefers-color-scheme: dark){ :root[data-product="blinkers"]{ --ember:#F2A24B; --ember-soft:#2A2415; } }
+:root[data-product="blinkers"][data-theme="light"]{ --ember:#C9761A; --ember-soft:#F4E6D2; }
+:root[data-product="blinkers"][data-theme="dark"]{ --ember:#F2A24B; --ember-soft:#2A2415; }
 
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
@@ -41,15 +54,18 @@ a { color:inherit; }
 img { max-width:100%; display:block; }
 
 /* eyebrow / labels */
-.eyebrow { font-family:var(--mono); font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:var(--ember); margin:0 0 14px; }
+.eyebrow { font-family:var(--mono); font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:var(--ember); margin:0 0 14px; display:inline-flex; align-items:center; gap:8px; }
+.eyebrow .eb-moon { width:14px; height:14px; color:var(--ember); flex:none; }
 .mono { font-family:var(--mono); }
 
 /* nav */
 .nav { display:flex; align-items:center; gap:20px; padding:22px 0; }
-.brand { display:inline-flex; align-items:baseline; gap:0; font-family:var(--mono); font-weight:600; letter-spacing:.02em; text-decoration:none; font-size:15px; }
-.brand .b1 { color:var(--ink); }
-.brand .b2 { color:var(--ember); }
-.brand .b3 { color:var(--muted); font-weight:400; margin-left:7px; }
+.brand { display:inline-flex; align-items:center; gap:9px; text-decoration:none; }
+.brand .wm { display:inline-flex; align-items:center; font-family:var(--sans); font-size:18px; letter-spacing:-.01em; line-height:1; }
+.brand .w-simple { font-weight:300; color:var(--wsimple); }
+.brand .w-quiet { font-weight:500; color:var(--ink); }
+.brand .w-moon { width:.82em; height:.82em; margin:0 .25em; color:var(--ink); flex:none; }
+.brand .w-studio { font-family:var(--mono); font-size:10.5px; letter-spacing:.22em; text-transform:uppercase; color:var(--muted); }
 .nav .spacer { margin-left:auto; }
 .nav a.link { font-family:var(--mono); font-size:13px; letter-spacing:.04em; color:var(--muted); text-decoration:none; }
 .nav a.link:hover { color:var(--ink); }
@@ -67,7 +83,6 @@ p { margin:0 0 16px; }
 
 /* promises */
 .promises { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:8px; }
-.promise { }
 .promise .k { font-family:var(--mono); font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--ember); margin:0 0 10px; }
 .promise p { color:var(--muted); font-size:15px; margin:0; }
 @media (max-width:720px){ .promises { grid-template-columns:1fr; gap:20px; } }
