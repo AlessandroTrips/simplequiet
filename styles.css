@@ -133,7 +133,10 @@ p { margin:0 0 16px; }
 
 /* pricing */
 .plans { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
-.plan { background:var(--raised); border:1px solid var(--line); border-radius:var(--r); padding:26px; }
+.plan { background:var(--raised); border:1px solid var(--line); border-radius:var(--r); padding:26px; display:flex; flex-direction:column; }
+/* pin both CTAs to the bottom so they line up even when the plans list
+   different numbers of features */
+.plan-cta { margin-top:auto; padding-top:22px; }
 .plan.pro { border-color:var(--ember); }
 .plan .price { font-size:34px; font-weight:600; letter-spacing:-.01em; margin:14px 0 4px; }
 .plan .price small { font-size:15px; color:var(--muted); font-weight:400; }
