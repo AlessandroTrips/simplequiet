@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alessandrotrips.github.io/simplequiet/sitemap.xml
