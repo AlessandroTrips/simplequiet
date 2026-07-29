@@ -59,8 +59,9 @@
       <li><strong>storage</strong> — saves your settings and stats locally, as described above.</li>
       <li><strong>browsingData</strong> — used for one narrow purpose: clearing the cached service-worker data of sites <em>on your blocklist</em>, so a cached copy can't slip past a block. It is scoped to those blocked sites only and never touches your cookies, history, passwords, or any other site's data.</li>
       <li><strong>alarms</strong> — used by scheduled blocking (a Pro feature) to turn blocking on and off at the times you set.</li>
+      <li><strong>activeTab</strong> — lets Blinkers see the address of the tab you are currently on, so it can offer to block that site in one tap. Chrome grants this <em>only</em> at the moment you open Blinkers, and <em>only</em> for that one tab. The address is used there and then to add the site to your own blocklist. It is never stored anywhere else and never transmitted.</li>
     </ul>
-    <p>Blinkers requests <strong>no host permissions</strong> and <strong>no access to your history, tabs, or the content of pages you visit.</strong> It cannot read them.</p>
+    <p>Blinkers requests <strong>no host permissions</strong> at install, has <strong>no access to your browsing history</strong>, and never watches your tabs in the background. It cannot see the pages you visit — only, at your request, the one you are looking at when you open it.</p>
 
     <h3>Network activity</h3>
     <p>The free version of Blinkers makes <strong>zero network requests.</strong> It does not call any server, ours or anyone else's.</p>
